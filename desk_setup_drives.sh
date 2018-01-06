@@ -2,40 +2,41 @@ file="desk_setup_drives.txt"
 flag=0
 temp="temp.txt"
 
+# Reads the argument specified and sets flag
 while getopts ":armfch" opt; do 
 	case $opt in 
 		a)
-			flag=1;
+			flag=1; #Implies that disks have to be added
 			shift 1
 			;;
 
 		r)
-			flag=2;
+			flag=2;	#Implies that disks have to be removed
 			shift 1
 			;;
 
 		m)
-			flag=3;
+			flag=3; #Implies that desk setup disks have to be mounted
 			shift 1
 			;;
 
 		f)
-			flag=4;
+			flag=4; #Implies that all disks have to be unmounted
 			shift 1
 			;;
 
 		c)
-			flag=5;
+			flag=5; #Implies that all connected disks must be mounted
 			shift 1
 			;;
 
 		h)
-			flag=-1;
+			flag=-1; #Presents Help
 			shift 1
 			;;
 
 		\?)
-			echo "invalid option";
+			echo "invalid option"; #Invalid argument and thus presents help
 			flag=-1
 			;;
 	esac
