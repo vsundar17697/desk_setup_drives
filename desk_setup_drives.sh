@@ -95,6 +95,6 @@ elif [ $flag -eq 0 ]; then
 
 elif [ $flag -eq -1 ]; then
 	
-	less man.txt
+	less README.md
 
 fi
