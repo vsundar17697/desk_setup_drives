@@ -5,6 +5,18 @@ chmod +x init.sh
 sh init.sh 
 from the pulled directory to add alias and initialize the file to keep track of the desk setup drives.
 
+If you use zsh or bash, the alias is added automatically, otherwise give the path to the shells rc file you use.
+If that doesn't suit you, run the following commands manually
+
+chmod +x desk_setup_drives.sh
+
+add the followling line to your rc file
+
+alias dsd="sh <path to desk_setup_drives.sh>"
+source <rc file>
+
+READY TO GO !
+
 Desk Setup Manager
 Use
 
@@ -23,14 +35,14 @@ dsd -c -> mount only drives that you mentioned as a part of your desk setup
 
 Example
 
-dsd -a Sandisk WD // This will add Sandisk as a part of your desk drive
+dsd -a Sandisk WD # This will add Sandisk as a part of your desk drive
 
-dsd -r WD // This will remove WD which you had earlier entered as a part of your desk
+dsd -r WD # This will remove WD which you had earlier entered as a part of your desk
 
-dsd // This will unmount only the content of your desk. In this case only Sandisk will be unmounted.
+dsd # This will unmount only the content of your desk. In this case only Sandisk will be unmounted.
 
-dsd -f // This will unmount all external drives connected to desk setup including the ones that aren't included in the desk drive list.
+dsd -f # This will unmount all external drives connected to desk setup including the ones that aren't included in the desk drive list.
 
-dsd -m // This will mount all external drives which are a part of your desk setup
+dsd -m # This will mount all external drives which are a part of your desk setup
 
-dsd -c // This will mount all the external drives which are connected to your device.
+dsd -c # This will mount all the external drives which are connected to your device.
