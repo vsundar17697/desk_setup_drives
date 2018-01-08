@@ -1,19 +1,23 @@
-Description: Desk setup manager is a script i wrote for myself and is tailored to my needs. My setup involves a macbook pro which also doubles as a workstation through my thunderbolt desk. However everytime i disconenct i had to disconnect all drives which are a part of my desk. This script is very simple to use and can save a lot of time. I've coupled this script along with another application to be executed on sleep and wake of my device. However that application would not make this script generic and thus you are free to use this any way you like.
+Description: Desk setup manager is a script i wrote for myself and is tailored to my needs. My setup involves a macbook pro which also doubles as a workstation through my thunderbolt dock. However everytime i disconnect, I had to disconnect all drives which are a part of my dock. This script is very simple to use and can save a lot of time. I've coupled this script along with another application to be executed on sleep and wake of my device. However that application would not make this script generic and thus you are free to use this any way you like.
 
 Please run 
+
 chmod +x init.sh
 sh init.sh 
+source [rc file]
+
 from the pulled directory to add alias and initialize the file to keep track of the desk setup drives.
 
 If you use zsh or bash, the alias is added automatically, otherwise give the path to the shells rc file you use.
 If that doesn't suit you, run the following commands manually
 
 chmod +x desk_setup_drives.sh
+touch desk_setup_drives.txt
 
 add the followling line to your rc file
 
-alias dsd="sh <path to desk_setup_drives.sh>"
-source <rc file>
+alias dsd="sh [path to desk_setup_drives.sh]"
+source [rc file]
 
 READY TO GO !
 
