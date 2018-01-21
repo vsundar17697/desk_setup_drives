@@ -1,6 +1,6 @@
-file="desk_setup_drives.txt"
+file="~/.dsd/desk_setup_drives.txt"
 flag=0
-temp="temp.txt"
+temp="~/.dsd/temp.txt"
 
 # Reads the argument specified and sets flag
 while getopts ":armfch" opt; do 

@@ -1,8 +1,10 @@
-touch desk_setup_drives.txt
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 DIR=$DIR/"desk_setup_drives.sh"
-chmod +x desk_setup_drives.sh
-chmod +x init.sh 
+mkdir ~/.dsd
+cp -rf $DIR ~/.dsd/
+touch ~/.dsd/desk_setup_drives.txt
+DIR="~/.dsd/desk_setup_drives.sh"
+chmod +xwr desk_setup_drives.sh 
 
 #If user uses zsh, then alias is added to zshrc
 if [ -e ~/.zshrc ]; then
